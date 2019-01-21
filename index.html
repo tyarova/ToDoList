@@ -4,39 +4,74 @@
         <meta charset="UTF-8">
         <title>ToDoList</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="modal.css">
+        <link rel="stylesheet" href="ticket.css">
     </head>
     <body>
-        <div class="header">
-            <h2>My To Do List</h2>
-            <input type="text" id="myInput" placeholder="Enter smth">
+        <div class="container">
+            <div class="header" id="modalPlace">
+                <button class="create-btn" id="myBtn">Create New</button>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <p>Create ticket</p>
+                        </div>
+                        <div class="modal-body">
+                            <div class="ticket-type">
+                                <label>Ticket type</label>
+                                <div class="custom-select">
+                                        <select id="options">
+                                          <option value="0" id="firstItem">Work</option>
+                                          <option value="1" id="secondItem">Life</option>
+                                          <option value="2" id="thirdItem">Fun</option>
+                                        </select>
+                                </div>
+                            </div>
+                            <label>Summary</label>
+                            <input class="ticket-summery" type="text"></input>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="modal-btn" id="crTicket">Create</button>
+                            <button class="modal-btn" id="cnTicket">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+                <p>My ToDo list ;)</p>
+            </div>
+            <div class="main">
+                <div class="columns">
+                    <div class="col" id="first">
+                        <div class="head to-do">
+                            <p>TO DO</p>
+                        </div>
+                        <div class="items" id="ticket-first-col">
+                        </div>
+                    </div>   
+                    <div class="col" id="second">
+                        <div class="head in-progress">
+                            <p>IN PROGRESS</p>
+                        </div>
+                        <div class="items" id="ticket-second-col">
+                        </div>
+                    </div>
+                    <div class="col" id="third">
+                        <div class="head done">
+                            <p>DONE</p>
+                        </div>
+                        <div class="items" id="ticket-third-col">
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <p>Here Will Be Smth</p>
+                </div>
+            </div>
+            <div class="footer">
+                <p>Have a nice day!</p>
+            </div>
         </div>
-        <div class="main">
-                <div id="status" class="column-name">
-                    <h3>Not Started</h3>
-                </div>
-                <div id="status" class="column-name">
-                    <h3>In Progress</h3>
-                </div>
-                <div id="status" class="column-name">
-                    <h3>Done</h3>
-                </div>
-            <div>
-                <div class="column column1">
-                    <div class="item" id="work">
-                        <p>WORK</p>
-                    </div>
-                    <div class="item" id="life">
-                        <p>LIFE</p>
-                    </div>
-                    <div class="item" id="fun">
-                        <p>FUN</p>
-                    </div>
-                </div>
-            </div>
-            <div class="column column2">
-            </div>
-            <div class="column column3">
-            </div>
-        </div>
+        <script src="modal.js"></script>
+        <script src="ticket.js"></script>
     </body>
 </html>

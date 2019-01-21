@@ -1,0 +1,22 @@
+.item{
+    margin: 10px 30px 10px 30px;
+    height: 100px;
+    padding: 5px;
+    text-align: left;
+    color: 	#778899;
+    font-size: 14px;
+    border: 1px solid silver;
+    border-radius: 4px;
+}
+#work{
+    background-color: #FFE4B5;
+    border-left: 5px solid #FFA500;
+}
+#life{
+    background-color:	#E6E6FA;
+    border-left: 5px solid #622569;
+}
+#fun{
+    background-color: #ddeedd;
+    border-left: 5px solid #588c7e;
+}
