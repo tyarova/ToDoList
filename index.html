@@ -14,7 +14,7 @@
                 <div id="myModal" class="modal">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <span class="close">&times;</span>
+                            <span class="close" id="close">&times;</span>
                             <p>Create ticket</p>
                         </div>
                         <div class="modal-body">
@@ -22,9 +22,9 @@
                                 <label>Ticket type</label>
                                 <div class="custom-select">
                                         <select id="options">
-                                          <option value="0" id="firstItem">Work</option>
-                                          <option value="1" id="secondItem">Life</option>
-                                          <option value="2" id="thirdItem">Fun</option>
+                                          <option value="work">Work</option>
+                                          <option value="life">Life</option>
+                                          <option value="fun">Fun</option>
                                         </select>
                                 </div>
                             </div>
@@ -46,6 +46,7 @@
                             <p>TO DO</p>
                         </div>
                         <div class="items" id="ticket-first-col">
+                            <span></span>
                         </div>
                     </div>   
                     <div class="col" id="second">

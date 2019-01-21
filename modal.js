@@ -1,19 +1,24 @@
 var modal = document.getElementById("myModal");
-var btn = document.getElementById("myBtn");
-var span = document.getElementsByClassName("close")[0];
+var createBtn = document.getElementById("myBtn");
+var closeBtn = document.getElementById("close");
 
-btn.onclick = function() {
+class CreateNewItemWindow{
+  openModal(){
   modal.style.display = "block";
-  console.log("working")
-}
+  }
 
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-  if (event.target == modal) {
+  closeModal() {
     modal.style.display = "none";
   }
 }
+
+var modalWindow = new CreateNewItemWindow();
+createBtn.addEventListener('click', modalWindow.openModal);
+closeBtn.addEventListener('click', modalWindow.closeModal);
+window.addEventListener('click', function(event){
+  if (event.target == modal){
+   modalWindow.closeModal();
+  }
+});
+
   

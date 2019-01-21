@@ -1,22 +1,39 @@
-function createItem(){
-    var selectedValue = document.getElementById("options").value;
-    var item = document.createElement("div");
-    item.className = "item";
-if(selectedValue == '0'){
-        item.id = 'work'
-        item.innerHTML = "WORK";
-}else if(selectedValue == '1'){
-    item.id = 'life'
-    item.innerHTML = "LIFE";
-}else if(selectedValue == '2'){
-        item.id = 'fun'
-        item.innerHTML = "FUN";
-}
-var tickets = document.getElementById('ticket-first-col');
-tickets.appendChild(item);
-}
+ var tickets = document.getElementById('ticket-first-col');
+ var itemClassName = 'item';
 
-document.getElementById('crTicket').addEventListener("click", createItem);
+ function closeModal() {
+    modal.style.display = "none";
+  }
+
+ class Ticket{
+    constructor(parent, itemClassName){
+         var child = document.createElement("div");
+         this.parent = parent;
+         this.child = child;
+         var name = document.getElementById("options").value;
+         this.name = name;
+         this.itemClassName = itemClassName;
+         var itemCreated = false;
+         this.itemCreated = itemCreated;
+         this.createNew();
+    };
+
+    createNew(){
+        this.child.innerHTML = this.name;
+        this.child.className = this.itemClassName+' '+this.name;
+        this.parent.appendChild(this.child);
+        this.itemCreated = true;
+
+        if(this.itemCreated){
+            var modalWindow = new CreateNewItemWindow();
+            modalWindow.closeModal();
+        }
+    };
+ }
+
+document.getElementById('crTicket').addEventListener("click", function handleClick(){
+    new Ticket(tickets, itemClassName);
+}); 
 document.getElementById('cnTicket').addEventListener('click', function() {
     modal.style.display = "none";
   });

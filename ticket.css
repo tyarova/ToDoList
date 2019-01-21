@@ -7,16 +7,17 @@
     font-size: 14px;
     border: 1px solid silver;
     border-radius: 4px;
+    text-transform: uppercase;
 }
-#work{
+.work{
     background-color: #FFE4B5;
     border-left: 5px solid #FFA500;
 }
-#life{
+.life{
     background-color:	#E6E6FA;
     border-left: 5px solid #622569;
 }
-#fun{
+.fun{
     background-color: #ddeedd;
     border-left: 5px solid #588c7e;
 }
